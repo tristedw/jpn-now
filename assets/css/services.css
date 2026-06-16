@@ -1,0 +1,9 @@
+.service-stack {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .service-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

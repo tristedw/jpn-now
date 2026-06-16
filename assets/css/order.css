@@ -1,0 +1,23 @@
+.order-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.info-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 2rem;
+}
+
+.info-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 860px) {
+  .order-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,232 @@
+﻿<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order From Japan | Japan Now</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/order.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+    <script type="module" src="assets/js/pages/order.js"></script>
+  </head>
+  <body data-page="order">
+    <div class="page-bg"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Japan Now home">
+        <img src="assets/images/logo.png" alt="Japan Now logo" class="brand-logo" width="40" height="40" />
+        <span class="brand-copy">
+          <strong>Japan Now</strong>
+          <span>Japan to Canada imports</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="store.html">Store</a>
+        <a href="order.html" aria-current="page">Order</a>
+        <button class="button button-primary nav-quote" data-modal-open>Get a quote</button>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- PAGE HERO -->
+      <section class="page-hero">
+        <p class="eyebrow" data-hero-line>Place an order</p>
+        <h1 data-hero-line>Order From Japan</h1>
+        <p class="lede" data-hero-line>
+          Send us the link to any auction listing, or any other Japanese manufacture. Or simply
+          tell us what part you are looking for. Please specify if you are wanting the item to go
+          on our container, or be direct shipped.
+        </p>
+      </section>
+
+      <!-- ORDER GRID -->
+      <section class="section order-grid">
+
+        <!-- HOW TO ORDER -->
+        <div class="info-card" data-reveal>
+          <h2>How To Order</h2>
+          <ol class="process-list">
+            <li>Email inquiry</li>
+            <li>Receive quote</li>
+            <li>Purchase goods</li>
+            <li>Receive email updates on part status and container arrival</li>
+            <li>Pickup / ship goods</li>
+          </ol>
+        </div>
+
+        <!-- SERVICE FEES -->
+        <div class="info-card" data-reveal>
+          <h2>Service Fees</h2>
+          <p><strong>30% service charge</strong> &mdash; capped at &yen;30,000 per order (doesn&rsquo;t include shipping or customs)</p>
+          <p>Please visit the <a href="pricing.html">pricing page</a> for a detailed list of our shipping prices from Osaka, Japan to Kelowna, BC Canada.</p>
+          <h3 style="margin-top:1.5rem">Container Service</h3>
+          <p>Our first container is scheduled to leave Japan this June. If you are ordering something oversized and would like it on the container please note this in the form below.</p>
+          <p>Items arriving for container will be stored in our warehouse and loaded when ready. Storage fees apply: <strong>&yen;12,000 per CBM per month.</strong></p>
+        </div>
+
+      </section>
+
+      <!-- PHOTO -->
+      <section class="photo-feature section">
+        <div class="photo-wrap" data-reveal>
+          <img
+            src="assets/images/gunsai.jpg"
+            alt="Gunsai Attack 2025  Japan Now"
+            class="photo-main"
+          />
+        </div>
+      </section>
+
+      <!-- ORDER FORM -->
+      <section class="section">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Get a quote</p>
+          <h2>Send Us The Link, Item Name, Or Auction Number</h2>
+          <p class="lede">We will do our best to provide an accurate quote with current exchange rate, domestic shipping, and if specified local shipping after arrival.</p>
+        </div>
+        <div class="contact-form-wrap" data-reveal>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="quote-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="o-name">Name</label>
+                <input type="text" id="o-name" name="name" required placeholder="Your name" />
+              </div>
+              <div class="form-field">
+                <label for="o-email">Email</label>
+                <input type="email" id="o-email" name="email" required placeholder="your@email.com" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="o-item">What are you looking for?</label>
+              <input type="text" id="o-item" name="item" required placeholder="Item name, link, or auction number" />
+            </div>
+            <div class="form-field">
+              <label for="o-service">Service type</label>
+              <select id="o-service" name="service">
+                <option value="container">Container service (oversized parts / vehicles)</option>
+                <option value="auction">Auction proxy service</option>
+                <option value="commercial">Commercial purchase (order from Japan)</option>
+                <option value="direct">Direct / air shipping (small items)</option>
+                <option value="storage">Storage</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="o-notes">Additional notes</label>
+              <textarea id="o-notes" name="notes" rows="4" placeholder="Links, condition, timeline, destination city, container vs direct shipped..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="button button-primary">Send request</button>
+              <p class="form-note">Or DM us <a href="https://instagram.com/jpn.now" target="_blank" rel="noreferrer">@jpn.now</a> on Instagram</p>
+            </div>
+            <div class="form-success" hidden>
+              <p>&#10003; Request sent! We will get back to you with a quote soon.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- TERMS OF SERVICE -->
+      <section class="section">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Please read before ordering</p>
+          <h2>Terms Of Service</h2>
+        </div>
+        <ul class="terms-list" data-reveal>
+          <li>All purchases are non-refundable once payment has been received and the item has been ordered in Japan.</li>
+          <li>Japan Now acts as a proxy buyer and is not responsible for item condition upon delivery in Japan. Items are inspected and photographed before shipping.</li>
+          <li>Japan Now is not responsible for items lost or damaged in transit after leaving our warehouse. Shipping insurance is available and recommended for high-value items.</li>
+          <li>Japan Now is not responsible for import duties, taxes, or customs clearance fees at the point of entry into Canada. These are the responsibility of the customer.</li>
+          <li>Pricing provided in quotes is estimated based on current exchange rates and carrier pricing. Final invoiced amounts may vary slightly.</li>
+          <li>Items destined for the container will be held in our Japanese warehouse. Storage fees of &yen;12,000 per CBM per month apply from the date of arrival at our facility.</li>
+          <li>Japan Now is not responsible for items that are prohibited from import into Canada. Customers are responsible for verifying that their goods are legal to import. (e.g. if you order an S14 headlight and it turns out it&rsquo;s not allowed to be imported, we are not responsible.)</li>
+          <li>By placing an order you agree to these terms of service.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="Japan Now" class="footer-logo" width="48" height="48" />
+          <p>Japan Now, Import Japanese goods into Western Canada with ease. Servicing all of the PNW and Canada with containers landing in Kelowna.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="store.html">Store</a>
+          <a href="order.html">Order from Japan</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://instagram.com/jpn.now" target="_blank" rel="noreferrer" class="social-link">@jpn.now on Instagram</a>
+          <button class="button button-primary" data-modal-open>Get a quote</button>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 Japan Now &middot; Japan to Canada Import Services</p>
+    </footer>
+
+    <!-- QUOTE MODAL -->
+    <div class="modal-overlay" id="quote-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+      <div class="modal-card">
+        <button class="modal-close" aria-label="Close modal" data-modal-close>&times;</button>
+        <div class="modal-body">
+          <p class="eyebrow">Get a quote</p>
+          <h2 id="modal-title">Send Us The Link, Item Name, Or Auction Number</h2>
+          <p class="modal-sub">We will do our best to provide an accurate quote with current exchange rate, domestic shipping, and if specified local shipping after arrival.</p>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="quote-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="f-name">Name</label>
+                <input type="text" id="f-name" name="name" required placeholder="Your name" />
+              </div>
+              <div class="form-field">
+                <label for="f-email">Email</label>
+                <input type="email" id="f-email" name="email" required placeholder="your@email.com" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="f-item">What are you looking for?</label>
+              <input type="text" id="f-item" name="item" required placeholder="Item name, link, or auction number" />
+            </div>
+            <div class="form-field">
+              <label for="f-service">Service type</label>
+              <select id="f-service" name="service">
+                <option value="container">Container service (oversized parts / vehicles)</option>
+                <option value="auction">Auction proxy service</option>
+                <option value="commercial">Commercial purchase (order from Japan)</option>
+                <option value="direct">Direct / air shipping (small items)</option>
+                <option value="storage">Storage</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="f-notes">Additional notes</label>
+              <textarea id="f-notes" name="notes" rows="3" placeholder="Links, condition, timeline, destination city, container vs direct shipped..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="button button-primary">Send request</button>
+              <p class="form-note">Or DM us <a href="https://instagram.com/jpn.now" target="_blank" rel="noreferrer">@jpn.now</a> on Instagram</p>
+            </div>
+            <div class="form-success" hidden>
+              <p>&#10003; Request sent! We will get back to you with a quote soon.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

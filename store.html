@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Store | Japan Now</title>
+    <meta
+      name="description"
+      content="A Shopify-ready store template for Japan Now with future product, collection, and cart integration placeholders."
+    />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/store.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+    <script type="module" src="assets/js/pages/store.js"></script>
+  </head>
+  <body data-page="store">
+    <div class="page-bg"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Japan Now home">
+        <img src="assets/images/logo.png" alt="Japan Now logo" class="brand-logo" width="40" height="40" />
+        <span class="brand-copy">
+          <strong>Japan Now</strong>
+          <span>Japan to Canada imports</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="store.html" aria-current="page">Store</a>
+        <a href="order.html">Order</a>
+        <button class="button button-primary nav-quote" data-modal-open>Get a quote</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow" data-reveal>Shopify-ready storefront</p>
+        <h1 data-reveal>Templatized store, built to connect later.</h1>
+        <p class="lede" data-reveal>
+          This page is a polished storefront shell for now: product cards, collection slots, cart
+          placeholders, and Shopify hook points are already laid out so the live commerce layer can
+          be wired in without redesigning the page.
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a class="button button-primary" href="#featured-products">Browse products</a>
+          <a class="button button-secondary" href="#integration-map">View integration map</a>
+        </div>
+      </section>
+
+      <section class="section store-showcase">
+        <div class="store-shell" data-reveal>
+          <div class="store-shell-copy">
+            <p class="eyebrow">Storefront shell</p>
+            <h2>Shopify sections are mapped before the API is.</h2>
+            <p>
+              Use this layout as the theme foundation. Each block already has a clear role for
+              future Shopify data, cart logic, and checkout wiring.
+            </p>
+          </div>
+          <div class="store-shell-panel">
+            <div class="store-chip-row">
+              <span class="store-chip">Theme ready</span>
+              <span class="store-chip">Product slots</span>
+              <span class="store-chip">Checkout placeholder</span>
+            </div>
+            <ul class="store-hook-list">
+              <li><code>data-shopify-root</code> for the page shell</li>
+              <li><code>data-shopify-product-handle</code> for product cards</li>
+              <li><code>data-shopify-cart-drawer</code> for a future cart drawer</li>
+              <li><code>data-shopify-checkout</code> for the final buy button</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="featured-products">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Featured products</p>
+          <h2>Placeholder merchandise cards.</h2>
+          <p class="lede">
+            These products are intentionally template-first. Swap the labels, prices, and imagery
+            with live Shopify data later without changing the structure.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="card product-card" data-shopify-product-handle="jdm-bumper-cover">
+            <div class="product-media">
+              <span class="product-media-label">Product image</span>
+              <span class="product-media-note">Replace with Shopify media</span>
+            </div>
+            <p class="eyebrow">Body kit</p>
+            <h3>JDM Bumper Cover</h3>
+            <p>
+              Clean product card placeholder with room for images, variants, and dynamic stock
+              status later.
+            </p>
+            <div class="product-meta">
+              <span>Handle: jdm-bumper-cover</span>
+              <strong>$0.00</strong>
+            </div>
+            <div class="product-actions">
+              <a class="button button-secondary" href="#integration-map">View hook</a>
+              <button class="button button-primary" type="button" data-shopify-add-to-cart>
+                Add to cart
+              </button>
+            </div>
+          </article>
+
+          <article class="card product-card" data-shopify-product-handle="garage-storage-pack">
+            <div class="product-media">
+              <span class="product-media-label">Product image</span>
+              <span class="product-media-note">Replace with Shopify media</span>
+            </div>
+            <p class="eyebrow">Storage</p>
+            <h3>Garage Storage Pack</h3>
+            <p>
+              Designed for a collection item that can be synced from Shopify once inventory is
+              connected.
+            </p>
+            <div class="product-meta">
+              <span>Collection slot</span>
+              <strong>$0.00</strong>
+            </div>
+            <div class="product-actions">
+              <a class="button button-secondary" href="#integration-map">View hook</a>
+              <button class="button button-primary" type="button" data-shopify-add-to-cart>
+                Add to cart
+              </button>
+            </div>
+          </article>
+
+          <article class="card product-card" data-shopify-product-handle="shipping-service-voucher">
+            <div class="product-media">
+              <span class="product-media-label">Product image</span>
+              <span class="product-media-note">Replace with Shopify media</span>
+            </div>
+            <p class="eyebrow">Service</p>
+            <h3>Shipping Service Voucher</h3>
+            <p>
+              Can become a real digital product, store credit, or checkout add-on when the store is
+              live.
+            </p>
+            <div class="product-meta">
+              <span>Digital SKU</span>
+              <strong>$0.00</strong>
+            </div>
+            <div class="product-actions">
+              <a class="button button-secondary" href="#integration-map">View hook</a>
+              <button class="button button-primary" type="button" data-shopify-add-to-cart>
+                Add to cart
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-split" id="integration-map">
+        <div data-reveal>
+          <p class="eyebrow">Integration map</p>
+          <h2>Every future Shopify connection already has a landing spot.</h2>
+          <p class="lede">
+            When the store backend is ready, this page can be connected to a product feed, cart
+            drawer, variant selector, and checkout flow without reworking the visual structure.
+          </p>
+        </div>
+        <div class="integration-card" data-reveal>
+          <ul class="integration-list">
+            <li><strong>Collection grid:</strong> swap static cards for Shopify collection data.</li>
+            <li><strong>Product detail:</strong> open a modal or detail page from each card.</li>
+            <li><strong>Cart drawer:</strong> bind add-to-cart actions to the Shopify cart API.</li>
+            <li><strong>Checkout CTA:</strong> point the final buy button at Shopify checkout.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="cta-inner" data-reveal>
+          <p class="eyebrow">Ready for launch</p>
+          <h2>Need the store live now?</h2>
+          <p class="lede">
+            This page is ready to become the real storefront once the Shopify theme, products, and
+            checkout flow are hooked up.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="order.html">Keep the current workflow</a>
+            <button class="button button-secondary" data-modal-open>Ask for a quote</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="Japan Now" class="footer-logo" width="48" height="48" />
+          <p>
+            Japan Now, Import Japanese goods into Western Canada with ease. Servicing all of the
+            PNW and Canada with containers landing in Kelowna.
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="store.html">Store</a>
+          <a href="order.html">Order from Japan</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://instagram.com/jpn.now" target="_blank" rel="noreferrer" class="social-link">
+            @jpn.now on Instagram
+          </a>
+          <button class="button button-primary" data-modal-open>Get a quote</button>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 Japan Now &middot; Japan to Canada Import Services</p>
+    </footer>
+
+    <div
+      class="modal-overlay"
+      id="quote-modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="modal-title"
+      aria-modal="true"
+    >
+      <div class="modal-card">
+        <button class="modal-close" aria-label="Close modal" data-modal-close>&times;</button>
+        <div class="modal-body">
+          <p class="eyebrow">Get a quote</p>
+          <h2 id="modal-title">Send Us The Link, Item Name, Or Auction Number</h2>
+          <p class="modal-sub">
+            We will do our best to provide an accurate quote with current exchange rate, domestic
+            shipping, and if specified local shipping after arrival.
+          </p>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="quote-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="f-name">Name</label>
+                <input type="text" id="f-name" name="name" required placeholder="Your name" />
+              </div>
+              <div class="form-field">
+                <label for="f-email">Email</label>
+                <input type="email" id="f-email" name="email" required placeholder="your@email.com" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="f-item">What are you looking for?</label>
+              <input
+                type="text"
+                id="f-item"
+                name="item"
+                required
+                placeholder="Item name, link, or auction number"
+              />
+            </div>
+            <div class="form-field">
+              <label for="f-service">Service type</label>
+              <select id="f-service" name="service">
+                <option value="container">Container service (oversized parts / vehicles)</option>
+                <option value="auction">Auction proxy service</option>
+                <option value="commercial">Commercial purchase (order from Japan)</option>
+                <option value="direct">Direct / air shipping (small items)</option>
+                <option value="storage">Storage</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="f-notes">Additional notes</label>
+              <textarea
+                id="f-notes"
+                name="notes"
+                rows="3"
+                placeholder="Links, condition, timeline, destination city, container vs direct shipped..."
+              ></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="button button-primary">Send request</button>
+              <p class="form-note">
+                Or DM us
+                <a href="https://instagram.com/jpn.now" target="_blank" rel="noreferrer">@jpn.now</a>
+                on Instagram
+              </p>
+            </div>
+            <div class="form-success" hidden>
+              <p>&#10003; Request sent! We will get back to you with a quote soon.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
