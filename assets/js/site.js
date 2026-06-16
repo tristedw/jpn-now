@@ -31,11 +31,12 @@ export function setupNavigation() {
 
   toggle.addEventListener('click', () => nav.classList.contains('is-open') ? closeNav() : openNav());
   nav.querySelectorAll('a, button').forEach(el => {
-    if (!el.dataset.modalOpen) el.addEventListener('click', closeNav);
+    if (!el.hasAttribute('data-modal-open')) el.addEventListener('click', closeNav);
   });
   document.addEventListener('click', e => {
     if (!toggle.contains(e.target) && !nav.contains(e.target) && nav.classList.contains('is-open')) closeNav();
   });
+  document.addEventListener('site:open-nav', openNav);
   document.addEventListener('site:close-nav', closeNav);
 }
 
@@ -201,9 +202,15 @@ export function setupModal() {
 
   const card = overlay.querySelector('.modal-card');
   const gsap = getGsap();
+  let shouldRestoreNav = false;
 
   function openModal() {
-    document.dispatchEvent(new CustomEvent('site:close-nav'));
+    const nav = document.querySelector('.site-nav');
+    const isMobileMenu = window.matchMedia('(max-width: 860px)').matches;
+    shouldRestoreNav = !!nav && nav.classList.contains('is-open') && isMobileMenu;
+    if (shouldRestoreNav) {
+      document.dispatchEvent(new CustomEvent('site:close-nav'));
+    }
     overlay.removeAttribute('aria-hidden');
     overlay.classList.add('is-open');
     document.body.style.overflow = 'hidden';
@@ -228,12 +235,20 @@ export function setupModal() {
           overlay.setAttribute('aria-hidden', 'true');
           overlay.classList.remove('is-open');
           document.body.style.overflow = '';
+          if (shouldRestoreNav) {
+            document.dispatchEvent(new CustomEvent('site:open-nav'));
+            shouldRestoreNav = false;
+          }
         },
       });
     } else {
       overlay.setAttribute('aria-hidden', 'true');
       overlay.classList.remove('is-open');
       document.body.style.overflow = '';
+      if (shouldRestoreNav) {
+        document.dispatchEvent(new CustomEvent('site:open-nav'));
+        shouldRestoreNav = false;
+      }
     }
   }
 
