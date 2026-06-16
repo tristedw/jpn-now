@@ -10,12 +10,14 @@ export function setupNavigation() {
   const gsap = getGsap();
 
   function openNav() {
+    if (gsap) gsap.killTweensOf(nav);
     nav.classList.add('is-open');
     toggle.setAttribute('aria-expanded', 'true');
     if (gsap) gsap.fromTo(nav, { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.22, ease: 'power2.out' });
   }
 
   function closeNav() {
+    if (gsap) gsap.killTweensOf(nav);
     toggle.setAttribute('aria-expanded', 'false');
     if (gsap) {
       gsap.to(nav, {
@@ -34,6 +36,7 @@ export function setupNavigation() {
   document.addEventListener('click', e => {
     if (!toggle.contains(e.target) && !nav.contains(e.target) && nav.classList.contains('is-open')) closeNav();
   });
+  document.addEventListener('site:close-nav', closeNav);
 }
 
 export function setupActiveNav() {
@@ -200,10 +203,12 @@ export function setupModal() {
   const gsap = getGsap();
 
   function openModal() {
+    document.dispatchEvent(new CustomEvent('site:close-nav'));
     overlay.removeAttribute('aria-hidden');
     overlay.classList.add('is-open');
     document.body.style.overflow = 'hidden';
     if (gsap) {
+      gsap.killTweensOf([overlay, card]);
       gsap.fromTo(overlay, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.26, ease: 'power2.out' });
       gsap.fromTo(card,
         { scale: 0.88, y: 32, autoAlpha: 0 },
@@ -215,6 +220,7 @@ export function setupModal() {
 
   function closeModal() {
     if (gsap) {
+      gsap.killTweensOf([overlay, card]);
       gsap.to(card,    { scale: 0.93, y: 14, autoAlpha: 0, duration: 0.22, ease: 'power2.in' });
       gsap.to(overlay, {
         autoAlpha: 0, duration: 0.3, delay: 0.06, ease: 'power2.in',

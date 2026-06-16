@@ -2,8 +2,43 @@
   grid-template-columns: 1fr;
 }
 
+.service-fees-overview {
+  padding: 1.75rem;
+}
+
+.service-fees-overview h2 {
+  margin-bottom: 1rem;
+}
+
+.fees-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.fees-list li {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.fees-list strong {
+  color: var(--text);
+}
+
 @media (min-width: 860px) {
   .service-stack {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-section .section-split {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 640px) {
+    .service-fees-overview {
+      padding: 1.25rem;
+    }
   }
 }

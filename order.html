@@ -39,57 +39,60 @@
 
     <main>
 
-      <!-- PAGE HERO -->
-      <section class="page-hero">
-        <p class="eyebrow" data-hero-line>Place an order</p>
-        <h1 data-hero-line>Order From Japan</h1>
-        <p class="lede" data-hero-line>
-          Send us the link to any auction listing, or any other Japanese manufacture. Or simply
-          tell us what part you are looking for. Please specify if you are wanting the item to go
-          on our container, or be direct shipped.
-        </p>
-      </section>
-
-      <!-- ORDER GRID -->
-      <section class="section order-grid">
-
-        <!-- HOW TO ORDER -->
-        <div class="info-card" data-reveal>
-          <h2>How To Order</h2>
-          <ol class="process-list">
-            <li>Email inquiry</li>
-            <li>Receive quote</li>
-            <li>Purchase goods</li>
-            <li>Receive email updates on part status and container arrival</li>
-            <li>Pickup / ship goods</li>
-          </ol>
-        </div>
-
-        <!-- SERVICE FEES -->
-        <div class="info-card" data-reveal>
-          <h2>Service Fees</h2>
-          <p><strong>30% service charge</strong> &mdash; capped at &yen;30,000 per order (doesn&rsquo;t include shipping or customs)</p>
-          <p>Please visit the <a href="pricing.html">pricing page</a> for a detailed list of our shipping prices from Osaka, Japan to Kelowna, BC Canada.</p>
-          <h3 style="margin-top:1.5rem">Container Service</h3>
-          <p>Our first container is scheduled to leave Japan this June. If you are ordering something oversized and would like it on the container please note this in the form below.</p>
-          <p>Items arriving for container will be stored in our warehouse and loaded when ready. Storage fees apply: <strong>&yen;12,000 per CBM per month.</strong></p>
-        </div>
-
-      </section>
-
-      <!-- PHOTO -->
-      <section class="photo-feature section">
-        <div class="photo-wrap" data-reveal>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-bg-wrap">
           <img
             src="assets/images/gunsai.jpg"
             alt="Gunsai Attack 2025  Japan Now"
-            class="photo-main"
+            class="hero-bg-img"
           />
+          <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow" data-hero-line>Place an order</p>
+            <h1 data-hero-line>Order From Japan</h1>
+            <p class="lede" data-hero-line>
+              Send us the link to any auction listing, or any other Japanese manufacture. Or simply
+              tell us what part you are looking for. Please specify if you are wanting the item to go
+              on our container, or be direct shipped.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#order-form">Start your order</a>
+              <a class="button button-secondary" href="pricing.html">View pricing</a>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="panel-card panel-card-accent">
+              <p class="panel-label">How To Order</p>
+              <ol class="process-list">
+                <li>Email inquiry</li>
+                <li>Receive quote</li>
+                <li>Purchase goods</li>
+                <li>Receive email updates on part status and container arrival</li>
+                <li>Pickup / ship goods</li>
+              </ol>
+            </div>
+            <div class="panel-card">
+              <p class="panel-label">Service Fees</p>
+              <p class="panel-value">
+                <strong>30% service charge</strong> &mdash; capped at &yen;30,000 per order
+                (doesn&rsquo;t include shipping or customs)
+              </p>
+              <p class="panel-value" style="margin-top: 1rem;">
+                Please visit the <a href="pricing.html">pricing page</a> for a detailed list of our
+                shipping prices from Osaka, Japan to Kelowna, BC Canada.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- ORDER FORM -->
-      <section class="section">
+      <section class="section" id="order-form">
         <div class="section-heading" data-reveal>
           <p class="eyebrow">Get a quote</p>
           <h2>Send Us The Link, Item Name, Or Auction Number</h2>

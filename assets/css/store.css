@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: 1.5rem;
-  padding: 1.5rem;
+  padding: 2rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background:
@@ -95,7 +95,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1rem;
+  padding: 1.15rem;
   gap: 0.25rem;
 }
 
@@ -161,7 +161,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--panel);
-  padding: 1.5rem;
+  padding: 1.75rem;
 }
 
 .integration-list strong {
@@ -172,7 +172,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--panel);
-  padding: 3rem 2rem;
+  padding: 3.5rem 2.25rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -185,7 +185,17 @@
 }
 
 @media (max-width: 980px) {
-  .store-shell,
+  .store-shell {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .store-shell-copy,
+  .store-shell-panel {
+    width: 100%;
+    max-width: 560px;
+  }
+
   .section-split {
     flex-direction: column;
     align-items: flex-start;
